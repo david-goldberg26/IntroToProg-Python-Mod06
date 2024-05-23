@@ -46,6 +46,9 @@ class FileProcessor:
             file = open(file_name, "r")     # open the file in read mode
             student_data = json.load(file)      # load the previous dictionaries from the json file
             print(student_data)
+            print('''
+                  This was the data read from the file
+                  ''')
             file.close()
         except Exception as e:
             IO.output_error_message(message='text file not found\n', error = e)     # calling IO class for structured error
